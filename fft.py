@@ -6,5 +6,7 @@ s0 = 10e-6
 t0 = s0 * 10
 y = np.exp(-np.power(t-t0, 2)/(s0**2))
 
-plt.plot(t, y)
+y_fft = np.fft.fft(y)
+
+plt.plot(t, y_fft)
 plt.show()
